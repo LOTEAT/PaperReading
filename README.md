@@ -2,6 +2,10 @@
  * @Author: LOTEAT
  * @Date: 2024-07-23 17:11:31
 -->
+<!--
+ * @Author: LOTEAT
+ * @Date: 2024-07-23 17:11:31
+-->
 # PaperReading
 在人工智能的学习中，我们需要掌握大量的神经网络架构。在学习这些架构的时候，我经常会看的时候掌握，但是没几天就忘记了。所以，我创建了这个仓库。我将我自己在论文学习以及代码学习的过程中掌握的知识以要点的形式写出来。在整理过程中，我发现有些论文可以被划归为很多个类别，因此在不同类别中可能会出现重复的论文讲解。
 
@@ -58,3 +62,15 @@
 - [x] <a href='SLAM/BayesFilter/bayes_filter.md'>Bayes Filter</a>: Bayes Filter推导
 
 - [ ] <a href='SLAM/Kalman/kalman.md'>Kalman Filter</a>: Kalman Filter推导
+
+
+### 5. Motion Planning
+#### 5.1 Search Based Methods
+- [x] <a href='MotionPlanning/SearchBased/AStar/astar.md'>AStar</a>: 启发式搜索算法。
+
+- [ ] <a href=''>BFS</a>: 
+
+- [ ] <a href=''>DFS</a>: 
+
+#### 5.1 Sampling Based Methods
+- [x] <a href=''>RRT</a>: 基于随机采样的路径搜索算法。
