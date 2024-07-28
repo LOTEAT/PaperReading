@@ -30,7 +30,7 @@
 
 - [x] <a href='ComputerVision/Backbone/MobileNetV3/mobilenetv3.md'>MobileNetV3</a>: 引入通道注意力机制，并采用新的激活函数，在降低参数计算量的同时提高性能。
 
-- [ ] <a href='ComputerVision/Backbone/EfficientNet/efficient.md'>EfficientNet</a>: 等待更新
+- [x] <a href='ComputerVision/Backbone/EfficientNet/efficientnet.md'>EfficientNet</a>: 探究了深度、宽度以及分辨率对性能的影响。
 
 
 #### 2. 2D Detection
@@ -70,9 +70,9 @@
 #### 5.1 Search Based Methods
 - [x] <a href='MotionPlanning/SearchBased/AStar/astar.md'>AStar</a>: 启发式搜索算法。
 
-- [ ] <a href=''>BFS</a>: 
+- [ ] <a href=''>BFS</a>: 宽度优先搜索。
 
-- [ ] <a href=''>DFS</a>: 
+- [ ] <a href=''>DFS</a>: 广度优先搜索。
 
 #### 5.1 Sampling Based Methods
 - [x] <a href=''>RRT</a>: 基于随机采样的路径搜索算法。
