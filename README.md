@@ -58,6 +58,8 @@
 
 - [x] <a href='Math/MultivariateGaussianDensity/multivariate_gaussian_density.md'>Multivariate Gaussian Density</a>: 多元高斯函数密度函数推导
 
+- [x] <a href='Math/GaussianAddition/gaussian_addition.md'>Addition of Gaussian Distribution</a>: 高斯分布相加后概率密度函数推导
+
 ### 4. SLAM
 - [x] <a href='SLAM/BayesFilter/bayes_filter.md'>Bayes Filter</a>: Bayes Filter推导
 
