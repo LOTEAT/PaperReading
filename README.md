@@ -56,12 +56,12 @@
 
 - [x] <a href='Math/GaussianAddition/gaussian_addition.md'>Addition of Gaussian Distribution</a>: 高斯分布相加后概率密度函数推导
 
-### 4. SLAM
-- [x] <a href='SLAM/BayesFilter/bayes_filter.md'>Bayes Filter</a>: Bayes Filter推导
+### 4. Localization
+- [x] <a href='Localization/BayesFilter/bayes_filter.md'>Bayes Filter</a>: Bayes Filter推导
 
-- [x] <a href='SLAM/KalmanFilter/kalman_filter.md'>Kalman Filter</a>: Kalman Filter推导
+- [x] <a href='Localization/KalmanFilter/kalman_filter.md'>Kalman Filter</a>: Kalman Filter推导
 
-- [x] <a href='SLAM/ExtendedKalmanFilter/extended_kalman_filter.md'>Extended Kalman Filter</a>: Extended Kalman Filter推导
+- [x] <a href='Localization/ExtendedKalmanFilter/extended_kalman_filter.md'>Extended Kalman Filter</a>: Extended Kalman Filter推导
 
 
 ### 5. Motion Planning
