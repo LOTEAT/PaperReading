@@ -72,5 +72,10 @@
 
 - [x] <a href='MotionPlanning/SearchBased/DFS/dfs.md'>DFS</a>: 广度优先搜索。
 
-#### 5.1 Sampling Based Methods
-- [x] <a href=''>RRT</a>: 基于随机采样的路径搜索算法。
+#### 5.2 Sampling Based Methods
+- [x] <a href='MotionPlanning/SamplingBased/RRT/rrt.md'>RRT</a>: 基于随机采样的路径搜索算法。
+
+#### 5.3 Motion Model
+- [x] <a href='MotionPlanning/MotionModel/OdometryMotionModel/odometry_motion_model.md'>Odometry Motion Model</a>: 里程计模型
+
+- [x] <a href='MotionPlanning/MotionModel/VelocityMotionModel/velocity_motion_model.md'>Velocity Motion Model</a>: 速度模型
