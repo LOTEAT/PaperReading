@@ -1,3 +1,6 @@
 [submodule "MotionPlanning/PathPlanning"]
 	path = MotionPlanning/PathPlanning
 	url = https://github.com/zhm-real/PathPlanning.git
+[submodule "MotionPlanning/MotionModel/OdometryMotionModel/OdometryModelDemo"]
+	path = MotionPlanning/MotionModel/OdometryMotionModel/OdometryModelDemo
+	url = https://github.com/LOTEAT/OdometryModelDemo
