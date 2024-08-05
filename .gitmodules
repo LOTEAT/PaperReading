@@ -4,3 +4,6 @@
 [submodule "MotionPlanning/MotionModel/OdometryMotionModel/OdometryModelDemo"]
 	path = MotionPlanning/MotionModel/OdometryMotionModel/OdometryModelDemo
 	url = https://github.com/LOTEAT/OdometryModelDemo
+[submodule "Localization/ExtendedKalmanFilter/EKF-Demo"]
+	path = Localization/ExtendedKalmanFilter/EKF-Demo
+	url = https://github.com/LOTEAT/EKF-Demo
