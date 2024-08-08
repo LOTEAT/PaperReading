@@ -92,3 +92,7 @@
 - <a href='https://github.com/LOTEAT/OdometryModelDemo'> Odometry Motion Model Demo</a>: 里程计模型Demo
 
 - [x] <a href='MotionPlanning/MotionModel/VelocityMotionModel/velocity_motion_model.md'>Velocity Motion Model</a>: 速度模型
+
+#### 5.4 Trajectory Generation
+
+- [x] <a href='MotionPlanning/TrajectoryGeneration/MinimumSnap/minimum_snap.md'>Minimum Snap</a>: minimum snap轨迹生成
