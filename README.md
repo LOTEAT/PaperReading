@@ -45,7 +45,6 @@
 
 #### 3. 3D Detection
 
-##### 2. Basic Knowlege
 
 ##### 3.1 Basic Knowlege
 
@@ -53,7 +52,7 @@
 
 ##### 3.2 BEV
 
-- [ ] <a href='ComputerVision/3DObjectDetection/BEV/Basic/lss.md'>Lift, Splat, and Shoot</a>: 等待更新
+- [x] <a href='ComputerVision/3DObjectDetection/BEV/Basic/lss.md'>Lift, Splat, and Shoot</a>: 通过预测图片像素的深度信息，构建了2D到3D的空间转换，将2D图像转化为BEV图像。
 
 
 ### 2. Natural Language Processing
