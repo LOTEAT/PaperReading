@@ -37,7 +37,12 @@
 
 ##### 2.2 Two Stage
 
-- [x] <a href='ComputerVision/2DObjectDetection/RCNN/rcnn.md'>RCNN</a>: RPN网络老祖。
+- [x] <a href='ComputerVision/2DObjectDetection/RCNN/rcnn.md'>RCNN</a>: RPN网络老祖，但是还没有完全提出RPN
+
+- [ ] <a href='ComputerVision/2DObjectDetection/FastRCNN/fast_rcnn.md'>Fast RCNN</a>: 对RCNN网络进行优化
+
+- [ ] <a href='ComputerVision/2DObjectDetection/FasterRCNN/faster_rcnn.md'>Faster RCNN</a>: RPN网络开山之作
+
 
 ##### 2.3 One Stage
 
@@ -52,8 +57,20 @@
 
 ##### 3.2 BEV
 
-- [x] <a href='ComputerVision/3DObjectDetection/BEV/Basic/lss.md'>Lift, Splat, and Shoot</a>: 通过预测图片像素的深度信息，构建了2D到3D的空间转换，将2D图像转化为BEV图像。
+###### 3.2.1 Basic Knowlege
 
+- [x] <a href='ComputerVision/3DObjectDetection/BEV/Basic/LSS/lss.md'>Lift, Splat, and Shoot</a>: 通过预测图片像素的深度信息，构建了2D到3D的空间转换，将2D图像转化为BEV图像。
+
+###### 3.2.2 Camera-based Method
+- [ ] <a href='ComputerVision/3DObjectDetection/BEV/BEVDepth/bevdepth.md'>BEVDepth</a>: 等待更新
+
+- [ ] <a href='ComputerVision/3DObjectDetection/BEV/BEVFormer/bevformer.md'>BEVFormer</a>: 等待更新
+
+###### 3.2.3 LiDAR-based Method
+
+###### 3.2.4 Fusion-based Method
+
+- [ ] <a href='ComputerVision/3DObjectDetection/BEV/BEVFusion/bevfusion.md'>BEVFusion</a>: 等待更新
 
 ### 2. Natural Language Processing
 
@@ -95,3 +112,19 @@
 #### 5.4 Trajectory Generation
 
 - [x] <a href='MotionPlanning/TrajectoryGeneration/MinimumSnap/minimum_snap.md'>Minimum Snap</a>: minimum snap轨迹生成
+
+### 6. MMSeries
+#### 6.1 MMEngine
+
+##### 6.1.1 Scheduler
+###### 6.1.1.1 Scheduler
+- [x] <a href='MMSeries/mmengine/scheduler/Basic/scheduler.md'>Scheduler</a>: MMEngine Scheduler的基础类
+
+- [x] <a href='MMSeries/mmengine/scheduler/LinearScheduler/linear_scheduler.md'>Linear Scheduler</a>: 线性学习率调整
+
+- [x] <a href='MMSeries/mmengine/scheduler/LinearScheduler/linear_scheduler.md'>StepLR Scheduler</a>: 步长学习率调整
+
+
+#### 6.2 MMDetection
+
+#### 6.3 MMDetection3D

@@ -7,3 +7,6 @@
 [submodule "Localization/ExtendedKalmanFilter/EKF-Demo"]
 	path = Localization/ExtendedKalmanFilter/EKF-Demo
 	url = https://github.com/LOTEAT/EKF-Demo
+[submodule "ComputerVision/2DObjectDetection/mmdetection"]
+	path = ComputerVision/2DObjectDetection/mmdetection
+	url = https://github.com/open-mmlab/mmdetection
