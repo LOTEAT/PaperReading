@@ -33,7 +33,9 @@
 
 ##### 2.1 Basic Knowlege
 
-- [ ] <a href='ComputerVision/2DObjectDetection/Basic/mmdetection2d/mmdection2d.md'>MMDetection2d</a>: MMDetection2D是由MMLab编写的一款2D目标检测框架，在本文档中将简略介绍一些会用到的关键基础通用组件。
+- [x] <a href='ComputerVision/2DObjectDetection/Basic/IoU/iou.md'>IoU</a>: IoU计算
+- [ ] <a href='ComputerVision/2DObjectDetection/Basic/mAP/mAP.md'>mAP</a>: mAP计算
+- [ ] <a href='ComputerVision/2DObjectDetection/Basic/NMS/nms.md'>NMS</a>: 非极大值抑制
 
 ##### 2.2 Two Stage
 
@@ -117,14 +119,21 @@
 #### 6.1 MMEngine
 
 ##### 6.1.1 Scheduler
-###### 6.1.1.1 Scheduler
-- [x] <a href='MMSeries/mmengine/scheduler/Basic/scheduler.md'>Scheduler</a>: MMEngine Scheduler的基础类
+- [x] <a href='MMSeries/mmengine/scheduler/Basic/scheduler.md'>Scheduler</a>: MMEngine Scheduler基类
 
 - [x] <a href='MMSeries/mmengine/scheduler/LinearScheduler/linear_scheduler.md'>Linear Scheduler</a>: 线性学习率调整
 
 - [x] <a href='MMSeries/mmengine/scheduler/LinearScheduler/linear_scheduler.md'>StepLR Scheduler</a>: 步长学习率调整
 
+- [x] <a href='MMSeries/mmengine/scheduler/MultiStepScheduler/multi_step_scheduler.md'>Multi Step Scheduler</a>: 多步长学习率调整
 
 #### 6.2 MMDetection
+
+##### 6.1.1 Task Utils
+- [x] <a href='MMSeries/mmdetection/task_utils/Basic/Assigner/assigner.md'>Assigner</a>: MMDetection Assigner基类
+
+- [x] <a href='MMSeries/mmdetection/task_utils/Basic/AssignResult/assign_result.md'>AssignResult</a>: 包装Assign后的结果
+
+- [x] <a href='MMSeries/mmdetection/task_utils/MaxIoUAssigner/max_iou_assigner.md'>MaxIouAssigner</a>: 基于IoU的标签赋值
 
 #### 6.3 MMDetection3D
