@@ -10,3 +10,6 @@
 [submodule "ComputerVision/2DObjectDetection/mmdetection"]
 	path = ComputerVision/2DObjectDetection/mmdetection
 	url = https://github.com/open-mmlab/mmdetection
+[submodule "MotionPlanning/TrajectoryGeneration/MinimumSnap/MinimumSnapDemo"]
+	path = MotionPlanning/TrajectoryGeneration/MinimumSnap/MinimumSnapDemo
+	url = https://github.com/LOTEAT/MinimumSnap-Demo
