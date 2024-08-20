@@ -3,7 +3,7 @@
  * @Date: 2024-08-17 16:51:38
 -->
 ## Max IoU Assigner
-- 前置知识：<a href='../Basic/Assigner/assigner.md'>Assigner</a>, <a href='../../../../ComputerVision/2DObjectDetection/Basic/IoU/iou.md'>IoU</a>
+- 前置知识：<a href='../Basic/Assigner/assigner.md'>Assigner</a>, <a href='../Basic/AssignResult/assign_result.md'>AssignResult</a>, <a href='../../../../ComputerVision/2DObjectDetection/Basic/IoU/iou.md'>IoU</a>
 - [代码链接](https://github.com/open-mmlab/mmdetection)
 
 

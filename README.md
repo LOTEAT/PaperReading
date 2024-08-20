@@ -129,11 +129,16 @@
 
 #### 6.2 MMDetection
 
-##### 6.1.1 Task Utils
+##### 6.2.1 Task Utils
 - [x] <a href='MMSeries/mmdetection/task_utils/Basic/Assigner/assigner.md'>Assigner</a>: MMDetection Assigner基类
 
 - [x] <a href='MMSeries/mmdetection/task_utils/Basic/AssignResult/assign_result.md'>AssignResult</a>: 包装Assign后的结果
 
 - [x] <a href='MMSeries/mmdetection/task_utils/MaxIoUAssigner/max_iou_assigner.md'>MaxIouAssigner</a>: 基于IoU的标签赋值
+
+- [x] <a href='MMSeries/mmdetection/task_utils/Basic/Sampler/sampler.md'>Sampler</a>: MMDetection Sampler基类
+
+- [x] <a href='MMSeries/mmdetection/task_utils/Basic/SamplingResult/sampling_result.md'>SamplerResult</a>: 包装Sample后的结果
+
 
 #### 6.3 MMDetection3D
