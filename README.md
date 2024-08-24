@@ -74,6 +74,10 @@
 
 - [ ] <a href='ComputerVision/3DObjectDetection/BEV/BEVFusion/bevfusion.md'>BEVFusion</a>: 等待更新
 
+
+#### 4. Occupancy Network
+- [x] <a href='ComputerVision/Occupancy/OccupancyNetwork/occupancy_network.md'>Occupancy Network</a>: 将占据栅格网络引入到3维重建中，为之后的世界模型打下了基础。
+
 ### 2. Natural Language Processing
 
 ### 3. Math

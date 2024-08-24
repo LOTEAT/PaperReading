@@ -361,6 +361,8 @@ J=\left[\begin{array}{c}
 \mathbf{d}_P
 \end{array}\right]
 $$
+我们之所以要进行这一步
+
 对于位置变量来说，这些实际上是固定的，这些变量就是属于$d_F$；而对于加速度和速度，这些属于待优化变量，这些是属于$d_P$的。
 
 最终可以化简为
@@ -368,8 +370,11 @@ $$
 $$
 \begin{gathered}
 J=\mathbf{d}_F^T \mathbf{R}_{F F} \mathbf{d}_F+\mathbf{d}_F^T \mathbf{R}_{F P} \mathbf{d}_P+\mathbf{d}_P^T \mathbf{R}_{P F} \mathbf{d}_F+\mathbf{d}_P^T \mathbf{R}_{P P} \mathbf{d}_P \\
-\mathbf{d}_P^*=-\mathbf{R}_{P P}^{-1} \mathbf{R}_{F P}^T \mathbf{d}_F
 \end{gathered}
+$$
+这是一个二次函数，我们可以直接求解出最优值：
+$$
+\mathbf{d}_P^*=-\mathbf{R}_{P P}^{-1} \mathbf{R}_{F P}^T \mathbf{d}_F
 $$
 其实这个选择矩阵的构造是很简单的，就是通过01向量对变量的顺序进行调换。不过要注意的是，由于连续性约束的存在，我们会在不同的位置使用相同的变量。
 
