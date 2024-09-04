@@ -4,7 +4,7 @@
 -->
 
 ## StandardRoIHead
-- 前置知识：PyTorch
+- 前置知识：PyTorch, <a href='../BaseRoIHead/base_roi_head.md'>BaseRoIHead</a>
 - [代码链接](https://github.com/open-mmlab/mmdetection)
 ### 1. Code
 `StandardRoIHead`标准的ROI头，主要作用就是将RoI投影到特征图上。
