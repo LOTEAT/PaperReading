@@ -60,7 +60,10 @@ $$
 IoU = \frac{S_{intersection}}{S_1 + S_2 - S_{intersection}}
 $$
 
-### 2. Code
+### 2. IoF
+IoF的计算和IoU相似，只不过分母是gt框的面积。
+
+### 3. Code
 代码参考`mmdetection`中的IoU计算，讲解写在了代码中，不过代码中的原始注释还是比较详细的。
 ```python
 def bbox_overlaps(bboxes1, bboxes2, mode='iou', is_aligned=False, eps=1e-6):

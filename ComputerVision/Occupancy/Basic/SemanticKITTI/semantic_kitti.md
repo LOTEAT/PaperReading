@@ -46,7 +46,7 @@ def unpack(compressed):
   20: "other-vehicle"
   30: "person"
   31: "bicyclist"
-  32: "motorcyclist"
+  32: "motorcyclist0"
   40: "road"
   44: "parking"
   48: "sidewalk"
