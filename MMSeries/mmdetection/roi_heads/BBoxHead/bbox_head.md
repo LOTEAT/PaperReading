@@ -130,6 +130,8 @@ class BBoxHead(BaseModule):
                   scale levels, each is a 4D-tensor, the channels number
                   is num_base_priors * 4.
         """
+        # 输入特征维度是 B * C * H * W
+        # 所以需要先把后面两个维度去除
         if self.with_avg_pool:
             if x.numel() > 0:
                 x = self.avg_pool(x)
@@ -138,7 +140,9 @@ class BBoxHead(BaseModule):
                 # avg_pool does not support empty tensor,
                 # so use torch.mean instead it
                 x = torch.mean(x, dim=(-1, -2))
+        # 分类
         cls_score = self.fc_cls(x) if self.with_cls else None
+        # 回归
         bbox_pred = self.fc_reg(x) if self.with_reg else None
         return cls_score, bbox_pred
 
@@ -177,25 +181,34 @@ class BBoxHead(BaseModule):
                 - bbox_weights(Tensor):Regression weights for all
                   proposals, has shape (num_proposals, 4).
         """
+        # 获取正样本和负样本的数量
         num_pos = pos_priors.size(0)
         num_neg = neg_priors.size(0)
+        # 总样本数量
         num_samples = num_pos + num_neg
 
         # original implementation uses new_zeros since BG are set to be 0
         # now use empty & fill because BG cat_id = num_classes,
         # FG cat_id = [0, num_classes-1]
+        # 初始化标签张量
         labels = pos_priors.new_full((num_samples, ),
                                      self.num_classes,
                                      dtype=torch.long)
+        # 确定回归目标的维度
         reg_dim = pos_gt_bboxes.size(-1) if self.reg_decoded_bbox \
             else self.bbox_coder.encode_size
+        # 初始化标签权重和边界框回归目标张量
         label_weights = pos_priors.new_zeros(num_samples)
         bbox_targets = pos_priors.new_zeros(num_samples, reg_dim)
         bbox_weights = pos_priors.new_zeros(num_samples, reg_dim)
+        # 如果存在正样本
         if num_pos > 0:
+            # 设置正样本的标签
             labels[:num_pos] = pos_gt_labels
+            # 根据配置设置正样本的权重
             pos_weight = 1.0 if cfg.pos_weight <= 0 else cfg.pos_weight
             label_weights[:num_pos] = pos_weight
+            # 计算正样本的边界框回归目标
             if not self.reg_decoded_bbox:
                 pos_bbox_targets = self.bbox_coder.encode(
                     pos_priors, pos_gt_bboxes)
@@ -204,12 +217,17 @@ class BBoxHead(BaseModule):
                 # is applied directly on the decoded bounding boxes, both
                 # the predicted boxes and regression targets should be with
                 # absolute coordinate format.
+                # 使用绝对坐标格式的边界框
                 pos_bbox_targets = get_box_tensor(pos_gt_bboxes)
+            # 设置正样本的边界框回归目标
             bbox_targets[:num_pos, :] = pos_bbox_targets
+            # 设置正样本的回归权重
             bbox_weights[:num_pos, :] = 1
+        # 如果存在负样本
         if num_neg > 0:
+            # 设置负样本的标签权重为1.0
             label_weights[-num_neg:] = 1.0
-
+        # 返回计算得到的标签、标签权重、边界框回归目标和边界框回归权重
         return labels, label_weights, bbox_targets, bbox_weights
 
     def get_targets(self,
@@ -253,10 +271,12 @@ class BBoxHead(BaseModule):
                 (num_proposals, 4) when `concat=False`, otherwise just a
                 single tensor has shape (num_all_proposals, 4).
         """
+        # 将数据组织为列表
         pos_priors_list = [res.pos_priors for res in sampling_results]
         neg_priors_list = [res.neg_priors for res in sampling_results]
         pos_gt_bboxes_list = [res.pos_gt_bboxes for res in sampling_results]
         pos_gt_labels_list = [res.pos_gt_labels for res in sampling_results]
+        # 多进程
         labels, label_weights, bbox_targets, bbox_weights = multi_apply(
             self._get_targets_single,
             pos_priors_list,
@@ -264,7 +284,7 @@ class BBoxHead(BaseModule):
             pos_gt_bboxes_list,
             pos_gt_labels_list,
             cfg=rcnn_train_cfg)
-
+        # concat
         if concat:
             labels = torch.cat(labels, 0)
             label_weights = torch.cat(label_weights, 0)
@@ -307,7 +327,7 @@ class BBoxHead(BaseModule):
             dict: A dictionary of loss and targets components.
                 The targets are only used for cascade rcnn.
         """
-
+        # 获得targets labels weights
         cls_reg_targets = self.get_targets(
             sampling_results, rcnn_train_cfg, concat=concat)
         losses = self.loss(
@@ -364,25 +384,36 @@ class BBoxHead(BaseModule):
 
         if cls_score is not None:
             avg_factor = max(torch.sum(label_weights > 0).float().item(), 1.)
+            # 如果分类预测结果张量中有元素
             if cls_score.numel() > 0:
+                # 计算分类损失
                 loss_cls_ = self.loss_cls(
                     cls_score,
                     labels,
                     label_weights,
                     avg_factor=avg_factor,
                     reduction_override=reduction_override)
+                # 如果分类损失返回的是字典（可能包含多个损失）
                 if isinstance(loss_cls_, dict):
+                    # 将分类损失字典更新到总损失字典中
                     losses.update(loss_cls_)
                 else:
+                    # 将分类损失添加到总损失字典中
                     losses['loss_cls'] = loss_cls_
+                # 如果使用了自定义激活函数
                 if self.custom_activation:
+                    # 计算分类准确率
                     acc_ = self.loss_cls.get_accuracy(cls_score, labels)
+                    # 将准确率添加到总损失字典中
                     losses.update(acc_)
                 else:
+                    # 计算并添加分类准确率到总损失字典中
                     losses['acc'] = accuracy(cls_score, labels)
         if bbox_pred is not None:
+            # 背景类别的索引
             bg_class_ind = self.num_classes
             # 0~self.num_classes-1 are FG, self.num_classes is BG
+            # 正样本的索引，labels 中大于等于0且小于背景类别的值
             pos_inds = (labels >= 0) & (labels < bg_class_ind)
             # do not perform bounding box regression for BG anymore.
             if pos_inds.any():
@@ -391,16 +422,20 @@ class BBoxHead(BaseModule):
                     # `GIouLoss`, `DIouLoss`) is applied directly on
                     # the decoded bounding boxes, it decodes the
                     # already encoded coordinates to absolute format.
+                    # 将回归预测从编码坐标转换为绝对坐标
                     bbox_pred = self.bbox_coder.decode(rois[:, 1:], bbox_pred)
                     bbox_pred = get_box_tensor(bbox_pred)
                 if self.reg_class_agnostic:
+                    # 选择正样本的边界框预测
                     pos_bbox_pred = bbox_pred.view(
                         bbox_pred.size(0), -1)[pos_inds.type(torch.bool)]
                 else:
+                    # 选择正样本的边界框预测，按类别索引选择
                     pos_bbox_pred = bbox_pred.view(
                         bbox_pred.size(0), self.num_classes,
                         -1)[pos_inds.type(torch.bool),
                             labels[pos_inds.type(torch.bool)]]
+                # 计算边界框损失
                 losses['loss_bbox'] = self.loss_bbox(
                     pos_bbox_pred,
                     bbox_targets[pos_inds.type(torch.bool)],
@@ -408,6 +443,7 @@ class BBoxHead(BaseModule):
                     avg_factor=bbox_targets.size(0),
                     reduction_override=reduction_override)
             else:
+                # 如果没有正样本，设置边界框损失为0
                 losses['loss_bbox'] = bbox_pred[pos_inds].sum()
 
         return losses
