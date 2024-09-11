@@ -29,6 +29,29 @@ Odometry Motion Model是通过$\delta_{rot1}$，$\delta_{rot2}$和$\delta_{trans
     padding: 2px;">
   	</div>
 </center>
+这里再额外补充一下车辆简单模型。
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="odometry_motion_model.assets/page3.jpg" width = "100%" alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+  	</div>
+</center>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="odometry_motion_model.assets/page4.jpg" width = "100%" alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+  	</div>
+</center>
 
 ### Demo实现
 [Odometry Motion Model Demo](https://github.com/LOTEAT/PaperReading/blob/main/MotionPlanning/MotionModel/OdometryMotionModel/OdometryModelDemo).
