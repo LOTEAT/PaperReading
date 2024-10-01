@@ -41,11 +41,13 @@
 
 - [x] <a href='ComputerVision/2DObjectDetection/RCNN/rcnn.md'>RCNN</a>: RPN网络老祖，但是还没有完全提出RPN
 
-- [ ] <a href='ComputerVision/2DObjectDetection/FastRCNN/fast_rcnn.md'>Fast RCNN</a>: 对RCNN网络进行优化
+- [x] <a href='ComputerVision/2DObjectDetection/FastRCNN/fast_rcnn.md'>Fast RCNN</a>: 对RCNN网络进行优化
 
 - [ ] <a href='ComputerVision/2DObjectDetection/FasterRCNN/faster_rcnn.md'>Faster RCNN</a>: RPN网络开山之作
 
-- [ ] <a href='ComputerVision/2DObjectDetection/MaskRCNN/mask_rcnn.md'>Faster RCNN</a>: 
+- [ ] <a href='ComputerVision/2DObjectDetection/MaskRCNN/mask_rcnn.md'>Mask RCNN</a>: 
+
+- [x] <a href='ComputerVision/2DObjectDetection/FeaturePyramidNetwork/feature_pyramid_network.md'>FeaturePyramidNetwork</a>: 融合多尺度特征，为不同尺度的物体提供丰富的语义信息
 
 
 ##### 2.3 One Stage
@@ -70,6 +72,8 @@
 
 - [ ] <a href='ComputerVision/3DObjectDetection/BEV/BEVFormer/bevformer.md'>BEVFormer</a>: 等待更新
 
+- [ ] <a href='ComputerVision/3DObjectDetection/BEV/BEVFusion/bevfusion.md'>BEVFusion</a>: 等待更新
+
 ###### 3.2.3 LiDAR-based Method
 
 ###### 3.2.4 Fusion-based Method
@@ -78,7 +82,25 @@
 
 
 #### 4. Occupancy Network
+
+##### 4.1 Basic Knowlege
+- [x] <a href='ComputerVision/Occupancy/Basic/SemanticKITTI/semantic_kitti.md'>SemanticKITTI</a>: SemanticKITTI数据格式
+
+- [ ] <a href='ComputerVision/Occupancy/Basic/ContextPrior/context_prior.md'>ContextPrior</a>: 
+
+
+
+##### 4.2 Occupancy Network
+
 - [x] <a href='ComputerVision/Occupancy/OccupancyNetwork/occupancy_network.md'>Occupancy Network</a>: 将占据栅格网络引入到3维重建中，为之后的世界模型打下了基础。
+
+- [ ] <a href='ComputerVision/Occupancy/MonoScene/mono_scene.md'>MonoScene Network</a>: 
+
+- [ ] <a href='ComputerVision/Occupancy/SurroundOcc/surround_occ.md'>SurroundOcc Network</a>: 
+
+
+
+
 
 ### 2. Natural Language Processing
 
@@ -89,6 +111,12 @@
 - [x] <a href='Math/MultivariateGaussianDensity/multivariate_gaussian_density.md'>Multivariate Gaussian Density</a>: 多元高斯函数密度函数推导
 
 - [x] <a href='Math/GaussianAddition/gaussian_addition.md'>Addition of Gaussian Distribution</a>: 高斯分布相加后概率密度函数推导
+
+- [x] <a href='Math/DubinsCurve/dubins_curve.md'>Dubins Curve</a>: 杜宾斯曲线
+
+-  <a href='https://github.com/LOTEAT/DubinsPath-Demo'> Dubins Path Demo</a>: 杜宾斯曲线Demo
+
+- [ ] <a href='Math/BézierCurve/bézier_curve.md'>Bézier Curve</a>: 贝塞尔曲线
 
 ### 4. Localization
 - [x] <a href='Localization/BayesFilter/bayes_filter.md'>Bayes Filter</a>: Bayes Filter推导
@@ -101,23 +129,31 @@
 
 
 ### 5. Motion Planning
-#### 5.1 Search Based Methods
+
+#### 5.1 Basic Knowlege
+- [x] <a href='MotionPlanning/Basic/OBVP/obvp.md'> OBVP</a>: OBVP问题及求解
+
+- [x] <a href='MotionPlanning/Basic/PathPlanning/path_planning.md'> PathPlanning</a>: PathPlanning公共组件
+
+
+
+#### 5.2 Search Based Methods
 - [x] <a href='MotionPlanning/SearchBased/AStar/astar.md'>AStar</a>: 启发式搜索算法。
 
 - [x] <a href='MotionPlanning/SearchBased/BFS/bfs.md'>BFS</a>: 宽度优先搜索。
 
 - [x] <a href='MotionPlanning/SearchBased/DFS/dfs.md'>DFS</a>: 广度优先搜索。
 
-#### 5.2 Sampling Based Methods
+#### 5.3 Sampling Based Methods
 - [x] <a href='MotionPlanning/SamplingBased/RRT/rrt.md'>RRT</a>: 基于随机采样的路径搜索算法。
 
-#### 5.3 Motion Model
+#### 5.4 Motion Model
 - [x] <a href='MotionPlanning/MotionModel/OdometryMotionModel/odometry_motion_model.md'>Odometry Motion Model</a>: 里程计模型
 - <a href='https://github.com/LOTEAT/OdometryModelDemo'> Odometry Motion Model Demo</a>: 里程计模型Demo
 
 - [x] <a href='MotionPlanning/MotionModel/VelocityMotionModel/velocity_motion_model.md'>Velocity Motion Model</a>: 速度模型
 
-#### 5.4 Trajectory Generation
+#### 5.5 Trajectory Generation
 
 - [x] <a href='MotionPlanning/TrajectoryGeneration/MinimumSnap/minimum_snap.md'>Minimum Snap</a>: minimum snap轨迹生成
 

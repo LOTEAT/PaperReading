@@ -4,7 +4,7 @@
 -->
 
 ## Fast R-CNN
-- 前置知识：<a href='../RCNN/rcnn.md'>RCNN</a>, <a href='../FPN/fpn.md'>FPN</a>, <a href="../../../MMSeries/mmdetection"> mmdetection </a>
+- 前置知识：<a href='../RCNN/rcnn.md'>RCNN</a>, <a href='../FeaturePyramidNetwork/feature_pyramid_network.md'>FPN</a>, <a href="../../../MMSeries/mmdetection"> mmdetection </a>, <a href="https://github.com/LOTEAT/mmcv-ops/blob/main/mmcv_ops/roi_align/roi_align.ipynb"> RoIAlign </a>
 - 作者：Ross Girshick
 - [文章链接](https://arxiv.org/pdf/1504.08083)
 - [代码链接](https://github.com/open-mmlab/mmdetection)

@@ -118,7 +118,7 @@ class CrossEntropyLoss(nn.Module):
 ```
 
 #### 1.2 _expand_onehot_labels
-这个函数的作用是
+这个函数的作用是将label扩展为one hot编码。
 ```python
 def _expand_onehot_labels(labels, label_weights, label_channels, ignore_index):
     """Expand onehot labels to match the size of prediction."""
