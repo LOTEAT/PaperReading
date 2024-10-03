@@ -91,10 +91,11 @@
 
 
 ##### 4.2 Occupancy Network
+- [x] <a href='ComputerVision/Occupancy/Basic/ContextPrior/context_prior.md'>CPNet</a>: 亲和力损失。
 
 - [x] <a href='ComputerVision/Occupancy/OccupancyNetwork/occupancy_network.md'>Occupancy Network</a>: 将占据栅格网络引入到3维重建中，为之后的世界模型打下了基础。
 
-- [ ] <a href='ComputerVision/Occupancy/MonoScene/mono_scene.md'>MonoScene Network</a>: 
+- [x] <a href='ComputerVision/Occupancy/MonoScene/mono_scene.md'>MonoScene Network</a>: 单目相机的Occupancy Network
 
 - [ ] <a href='ComputerVision/Occupancy/SurroundOcc/surround_occ.md'>SurroundOcc Network</a>: 
 

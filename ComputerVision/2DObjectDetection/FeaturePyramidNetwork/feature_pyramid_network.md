@@ -20,6 +20,19 @@
 
 通过自底向上、自顶向下和横向连接，FPN构建了一个多尺度的特征金字塔，每个层级的特征图都具有不同级别的语义信息和空间分辨率。这些特征图供后续任务使用。
 
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="feature_pyramid_network.assets/architecture.png" width = "100%" alt=""/>
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">
+      图1：FPN网络架构
+    </div>
+</center>
+
 ### 3. Code
 ```python
 class FPN(BaseModule):
