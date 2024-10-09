@@ -3,9 +3,7 @@
  * @Date: 2024-07-23 17:11:31
 -->
 # PaperReading
-在人工智能的学习中，我们需要掌握大量的神经网络架构。在学习这些架构的时候，我经常会看的时候掌握，但是没几天就忘记了。所以，我创建了这个仓库。我将我自己在论文学习以及代码学习的过程中掌握的知识以要点的形式写出来。在整理过程中，我发现有些论文可以被划归为很多个类别，因此在不同类别中可能会出现重复的论文讲解。
-
-持续更新，与诸君共勉。
+在人工智能的学习中，我们需要掌握大量的神经网络架构。在学习这些架构的时候，我经常会看的时候掌握，但是没几天就忘记了。所以，我创建了这个仓库。我将我自己在论文学习以及代码学习的过程中掌握的知识以要点的形式写出来。
 
 ## 主要内容
 ### 1. Computer Vision
@@ -14,7 +12,7 @@
 #### 1. Backbone
 
 ##### 1.1 Basic Knowlege
-- [ ] <a href='ComputerVision/Basic/Transformer/transformer.md'>Transformer</a>: 等待更新
+- [x] <a href='ComputerVision/Basic/Transformer/transformer.md'>Transformer</a>: 等待更新
 
 
 ##### 2.1 Backbone Networks
@@ -27,6 +25,8 @@
 - [x] <a href='ComputerVision/Backbone/MobileNetV3/mobilenetv3.md'>MobileNetV3</a>: 引入通道注意力机制，并采用新的激活函数，在降低参数计算量的同时提高性能。
 
 - [x] <a href='ComputerVision/Backbone/EfficientNet/efficientnet.md'>EfficientNet</a>: 探究了深度、宽度以及分辨率对性能的影响。
+
+- [x] <a href='ComputerVision/Backbone/SwinTransformer/swin_transformer.md'>SwinTransformer</a>: 通过多层级以及窗口注意力提升特征的表达能力。
 
 
 #### 2. 2D Detection
