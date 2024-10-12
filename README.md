@@ -43,7 +43,7 @@
 
 - [x] <a href='ComputerVision/2DObjectDetection/FastRCNN/fast_rcnn.md'>Fast RCNN</a>: 对RCNN网络进行优化
 
-- [ ] <a href='ComputerVision/2DObjectDetection/FasterRCNN/faster_rcnn.md'>Faster RCNN</a>: RPN网络开山之作
+- [x] <a href='ComputerVision/2DObjectDetection/FasterRCNN/faster_rcnn.md'>Faster RCNN</a>: RPN网络开山之作
 
 - [ ] <a href='ComputerVision/2DObjectDetection/MaskRCNN/mask_rcnn.md'>Mask RCNN</a>: 
 
@@ -51,7 +51,7 @@
 
 
 ##### 2.3 One Stage
-
+- [x] <a href='ComputerVision/2DObjectDetection/DETR/detr.md'>DETR</a>: 首个应用Transformer的端到端检测模型。
 
 
 #### 3. 3D Detection
