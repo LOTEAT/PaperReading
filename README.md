@@ -126,6 +126,8 @@
 
 - [x] <a href='Localization/ExtendedKalmanFilter/extended_kalman_filter.md'>Extended Kalman Filter</a>: Extended Kalman Filter推导
 
+- [x] <a href='Localization/NormalDistributionsTransform/normal_distributions_transform.md'>Normal Distributions Transform</a>: NDT推导
+
 -  <a href='https://github.com/LOTEAT/EKF-Demo'> Extended Kalman Filter Demo</a>: 扩展卡尔曼滤波Demo
 
 
