@@ -86,8 +86,6 @@
 ##### 4.1 Basic Knowlege
 - [x] <a href='ComputerVision/Occupancy/Basic/SemanticKITTI/semantic_kitti.md'>SemanticKITTI</a>: SemanticKITTI数据格式
 
-- [x] <a href='ComputerVision/Occupancy/Basic/ContextPrior/context_prior.md'>ContextPrior</a>: 提出了亲和力损失的概念
-
 
 
 ##### 4.2 Occupancy Network
