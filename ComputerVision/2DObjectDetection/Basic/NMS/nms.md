@@ -19,7 +19,5 @@ NMS，其步骤可以概括如下：
 - - - 如果两个bbox的IoU超过阈值，则舍弃第二个bbox
 - 结束循环，保留结果
 
-### 2. 
-
-### 3. Code
+### 2. Code
 参考[代码](https://github.com/LOTEAT/mmcv-ops/blob/main/mmcv_ops/nms/nms.ipynb)。
